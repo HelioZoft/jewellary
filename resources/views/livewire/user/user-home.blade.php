@@ -1,17 +1,17 @@
 <div>
     <div id="slider">
 		<ul>
-            <li style="background-image: url('{{ asset('user/images/0.jpg') }}')">
+            <li style="background-image: url('{{ asset('user/images/banner/jwel.jpg') }}')">
                 <h3>Make your life better</h3>
                 <h2>Genuine diamonds</h2>
                 <a href="#" class="btn-more">Read more</a>
             </li>
-            <li class="purple" style="background-image: url('{{ asset('user/images/01.jpg') }}')">
+            <li class="purple" style="background-image: url('{{ asset('user/images/banner/chin.jpg') }}')">
                 <h3>She will say “yes”</h3>
                 <h2>Engagement ring</h2>
                 <a href="#" class="btn-more">Read more</a>
             </li>
-            <li class="yellow" style="background-image: url('{{ asset('user/images/02.jpg') }}')">
+            <li class="yellow" style="background-image: url('{{ asset('user/images/banner/CHAIN.jpg') }}')">
                 <h3>You deserve to be beautiful</h3>
                 <h2>Golden bracelets</h2>
                 <a href="#" class="btn-more">Read more</a>
