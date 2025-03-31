@@ -3,7 +3,7 @@
     <!-- Logo Header -->
     <div class="logo-header" data-background-color="dark">
       <a href="index.html" class="logo">
-        <img src="{{asset('admin/assets/img/kaiadmin/logo_light.svg')}}" alt="navbar brand" class="navbar-brand" height="20" />
+        <img src="{{asset('user/img/ilogo.png')}}" alt="navbar brand" class="navbar-brand" height="40px" />
       </a>
       <div class="nav-toggle">
         <button class="btn btn-toggle toggle-sidebar">
@@ -43,7 +43,7 @@
           <div class="collapse" id="base">
             <ul class="nav nav-collapse">
               <li>
-                <a href="components/avatars.html">
+                <a href="#">
                   <span class="sub-item">Job Enquiry</span>
                 </a>
               </li>

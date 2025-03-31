@@ -4,10 +4,10 @@
             <img class="w-100" src="{{asset('user/img/carousel-1.jpg')}}" alt="Image">
             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                 <div class="p-3" style="max-width: 900px;">
-                    <h5 class="text-white text-uppercase mb-3 animated slideInDown">Creative & Innovative</h5>
-                    <h1 class="display-1 text-white mb-md-4 animated zoomIn">Creative & Innovative Digital Solution</h1>
-                    <a href="quote.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Free Quote</a>
-                    <a href="" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contact Us</a>
+                    <h5 class="text-white text-uppercase mb-3 animated slideInDown">Start Your Journey Today!</h5>
+                    <h3 class="display-1 text-white mb-md-4 animated zoomIn">Connecting Talent with the Right Jobs </h3>
+                    {{-- <a href="quote.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Free Quote</a> --}}
+                    <a href="" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Apply now</a>
                 </div>
             </div>
         </div>
@@ -15,10 +15,10 @@
             <img class="w-100" src="{{asset('user/img/carousel-2.jpg')}}" alt="Image">
             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                 <div class="p-3" style="max-width: 900px;">
-                    <h5 class="text-white text-uppercase mb-3 animated slideInDown">Creative & Innovative</h5>
-                    <h1 class="display-1 text-white mb-md-4 animated zoomIn">Creative & Innovative Digital Solution</h1>
-                    <a href="quote.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Free Quote</a>
-                    <a href="" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contact Us</a>
+                    <h5 class="text-white text-uppercase mb-3 animated slideInDown">Unlock Your Future</h5>
+                    <h1 class="display-1 text-white mb-md-4 animated zoomIn">Explore Exciting Career Opportunities!</h1>
+                    {{-- <a href="quote.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Free Quote</a> --}}
+                    <a href="" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Apply now</a>
                 </div>
             </div>
         </div>
