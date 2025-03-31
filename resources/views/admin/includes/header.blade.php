@@ -1,23 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Purple Admin</title>
-    <!-- plugins:css -->
-    <link rel="stylesheet" href="{{asset('admin/assets/vendors/mdi/css/materialdesignicons.min.css')}}">
-    <link rel="stylesheet" href="{{asset('admin/assets/vendors/ti-icons/css/themify-icons.css')}}">
-    <link rel="stylesheet" href="{{asset('admin/assets/vendors/css/vendor.bundle.base.css')}}">
-    <link rel="stylesheet" href="{{asset('admin/assets/vendors/font-awesome/css/font-awesome.min.css')}}">
-    <!-- endinject -->
-    <!-- Plugin css for this page -->
-    <link rel="stylesheet" href="{{asset('admin/assets/vendors/font-awesome/css/font-awesome.min.css')}}" />
-    <link rel="stylesheet" href="{{asset('admin/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css')}}">
-    <!-- End plugin css for this page -->
-    <!-- Layout styles -->
-    <link rel="stylesheet" href="{{asset('admin/assets/css/style.css')}}">
-    <!-- End layout styles -->
-    <link rel="shortcut icon" href="{{asset('admin/assets/images/favicon.png')}}" />
-  </head>
-  <body>
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Kaiadmin - Bootstrap 5 Admin Dashboard</title>
+  <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport" />
+  <link rel="icon" href="{{asset('admin/assets/img/kaiadmin/favicon.ico')}}" type="image/x-icon" />
+
+  <!-- Fonts and icons -->
+  <script src="{{asset('admin/assets/js/plugin/webfont/webfont.min.js')}}"></script>
+  <script>
+    WebFont.load({
+      google: { families: ["Public Sans:300,400,500,600,700"] },
+      custom: {
+        families: [
+          "Font Awesome 5 Solid",
+          "Font Awesome 5 Regular",
+          "Font Awesome 5 Brands",
+          "simple-line-icons",
+        ],
+        urls: ["admin/assets/css/fonts.min.css"],
+      },
+      active: function () {
+        sessionStorage.fonts = true;
+      },
+    });
+  </script>
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="{{asset("admin/assets/css/bootstrap.min.css")}}" />
+  <link rel="stylesheet" href="{{asset("admin/assets/css/plugins.min.css")}}" />
+  <link rel="stylesheet" href="{{asset("admin/assets/css/kaiadmin.min.css")}}" />
+
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link rel="stylesheet" href="{{asset('admin/assets/css/demo.css')}}" />
+</head>
+
+<body>
+  <div class="wrapper">
