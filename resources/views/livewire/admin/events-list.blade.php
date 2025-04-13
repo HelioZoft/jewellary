@@ -16,9 +16,12 @@
       <div class="row">
         <div class="col-md-12">
           <div class="card">
-            <div class="card-header">
-              <div class="card-title">Events Table</div>
-            </div>
+            <div class="card-header d-flex justify-content-between align-items-center">
+              <div class="card-title mb-0">Events Table</div>
+              <a href="{{ route('add-events') }}" class="btn btn-primary">
+                <i class="fa fa-plus"></i> Add Events
+              </a>
+            </div>            
             <div class="card-body">
               <table class="table table-head-bg-primary mt-4">
                 <thead>

@@ -27,9 +27,9 @@ Route::post('/login', [AuthController::class, 'login'])->name('admin.login.submi
 Route::middleware(['auth:admins'])->group(function () {
     Route::get('/admins', Dashboard::class)->name('admin.dashboard');
     Route::get('/awards', AwardsList::class)->name('all-awards');
-    Route::get('/add-awards', Awards::class)->name('admin.awards');
+    Route::get('/add-awards', Awards::class)->name('add-awards');
     Route::get('/edit-awards/{id}', Awards::class)->name('edit-awards');
     Route::get('/events', EventsList::class)->name('all-events');
-    Route::get('/add-events', Events::class)->name('admin.events');
+    Route::get('/add-events', Events::class)->name('add-events');
     Route::get('/edit-events/{id}', Events::class)->name('edit-events');
 });
