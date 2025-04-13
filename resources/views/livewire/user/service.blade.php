@@ -7,7 +7,7 @@
     </div>
 
     <!-- Full Screen Search Start -->
-    <div class="modal fade" id="searchModal" tabindex="-1">
+    {{-- <div class="modal fade" id="searchModal" tabindex="-1">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
                 <div class="modal-header border-0">
@@ -21,8 +21,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Full Screen Search End -->
+
+
 
         <!-- Service Start -->
         <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">

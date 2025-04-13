@@ -1,8 +1,15 @@
 <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
-    <a href="index.html" class="navbar-brand p-0">
-        <h1 class="m-0"><i class="fa fa-user-tie me-2"></i>igroups</h1>
-        {{-- <img src="{{asset('user/img/ilogo.png')}}" alt=""> --}}
+    <style>
+    .logo-img {
+        height: 80px;
+        max-width: 100%;
+        object-fit: contain;
+    }
+    </style>
+    <a href="{{ route('userhome') }}" class="navbar-brand p-0">
+        <img src="{{ asset('user/img/ilogo.png') }}" alt="Logo" class="logo-img">
     </a>
+    
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
         <span class="fa fa-bars"></span>
     </button>
@@ -10,7 +17,7 @@
         <div class="navbar-nav ms-auto py-0">
             <a href="{{route('userhome')}}" class="nav-item nav-link active">Home</a>
             <a href="{{route('about')}}" class="nav-item nav-link">About</a>
-            <a href="{{route('service')}}" class="nav-item nav-link">Services</a>
+            <a href="{{route('intern')}}" class="nav-item nav-link">Internship</a>
             <a href="{{route('events')}}" class="nav-item nav-link">Event</a>
             <a href="{{route('carrer')}}" class="nav-item nav-link">Career</a>
             <a href="{{route('contact')}}" class="nav-item nav-link">Contact</a>

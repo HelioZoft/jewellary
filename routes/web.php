@@ -21,7 +21,7 @@ use App\Livewire\User\Carrer;
 // User Route
 Route::get('/', Home::class)->name('userhome');
 Route::get('/about', About::class)->name('about');
-Route::get('/service', Service::class)->name('service');
+Route::get('/internship', Service::class)->name('intern');
 Route::get('/main-events', Event::class)->name('events');
 Route::get('/contact', Contact::class)->name('contact');
 Route::get('/carrer', Carrer::class)->name('carrer'); 
