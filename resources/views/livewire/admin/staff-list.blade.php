@@ -52,8 +52,8 @@
                                             <a href="{{ route('edit-staff', ['id' => $staff->id]) }}" title="Edit" style="margin-right: 10px;">
                                                 <i class="fa-solid fa-pen-to-square" style="font-size: 20px; color: #007bff; cursor: pointer;"></i>
                                             </a>
-                                            <a href="javascript:void(0)" title="Delete" onclick="confirmStaffDelete({{ $staff->id }})">
-                                                <i class="fa-solid fa-trash" style="font-size: 20px; color: #dc3545; cursor: pointer;"></i>
+                                            <a href="javascript:void(0);" onclick="confirmDelete('{{ $staff->id }}')">
+                                                <i class="fa-solid fa-trash text-danger" style="font-size: 20px; color: #dc3545; cursor: pointer;"></i>
                                             </a>
                                         </td>
                                     </tr>
@@ -69,8 +69,8 @@
 </div>
 
 @push('scripts')
-<script>
-    function confirmStaffDelete(id) {
+  <script>
+    function confirmDelete(id) {
         Swal.fire({
             title: 'Are you sure?',
             text: "This action cannot be undone!",
@@ -81,9 +81,26 @@
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                Livewire.dispatch('deleteStaff', { id: id });
+                // Send Livewire event to backend
+                Livewire.dispatch('confirmDelete', { id: id });
             }
         });
     }
+
+    // Optional: Show success message when backend confirms deletion
+    document.addEventListener('livewire:init', () => {
+        Livewire.on('staffDeleted', () => {
+            Swal.fire({
+                icon: 'success',
+                title: 'Deleted!',
+                text: 'The staff has been deleted.',
+                timer: 2000,
+                showConfirmButton: false
+            });
+        });
+    });
 </script>
+
+
+
 @endpush

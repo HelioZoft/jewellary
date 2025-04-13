@@ -49,8 +49,8 @@
                             <i class="fa-solid fa-pen-to-square" style="font-size: 20px; color: #007bff; cursor: pointer;"></i>
                         </a>
 
-                        <a href="javascript:void(0)" title="Delete" onclick="confirmDelete({{ $award->id }})">
-                          <i class="fa-solid fa-trash" style="font-size: 20px; color: #dc3545; cursor: pointer;"></i>
+                        <a href="javascript:void(0);" onclick="confirmDelete('{{ $award->id }}')">
+                          <i class="fa-solid fa-trash text-danger" style="font-size: 20px; color: #dc3545; cursor: pointer;"></i>
                         </a>
                                           
                     </td>
@@ -64,8 +64,8 @@
     </div>
   </div>
 
-@push('scripts')
-<script>
+  @push('scripts')
+  <script>
     function confirmDelete(id) {
         Swal.fire({
             title: 'Are you sure?',
@@ -77,10 +77,26 @@
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                // Livewire.emit('deleteAward', id);
-                Livewire.dispatch('deleteAward', { id: id });
+                // Send Livewire event to backend
+                Livewire.dispatch('confirmDelete', { id: id });
             }
-        })
+        });
     }
+
+    // Optional: Show success message when backend confirms deletion
+    document.addEventListener('livewire:init', () => {
+        Livewire.on('awardDeleted', () => {
+            Swal.fire({
+                icon: 'success',
+                title: 'Deleted!',
+                text: 'The award has been deleted.',
+                timer: 2000,
+                showConfirmButton: false
+            });
+        });
+    });
 </script>
+
+
+
 @endpush

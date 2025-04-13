@@ -5,9 +5,22 @@ namespace App\Livewire\Admin;
 use Livewire\Component;
 use Livewire\Attributes\Layout;
 use App\Models\Staff;
+use Livewire\Attributes\On;
 
 class StaffList extends Component
 {
+    #[On('confirmDelete')]
+    public function deleteEvent($id)
+    {
+        Staff::findOrFail($id)->delete();
+
+        // Send success message back to frontend
+        $this->dispatch('staffDeleted');
+    }
+
+
+
+
     #[Layout('admin.layouts.app')]
     public function render()
     {

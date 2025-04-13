@@ -13,18 +13,14 @@ class EventsList extends Component
 
     public $eventId;
 
-#[On('confirmDelete')]
-public function deleteEvent($id)
-{
-    Event::findOrFail($id)->delete();
+    #[On('confirmDelete')]
+    public function deleteEvent($id)
+    {
+        Event::findOrFail($id)->delete();
 
-    // Send success message back to frontend
-    $this->dispatch('eventDeleted');
-}
-
-
-
-
+        // Send success message back to frontend
+        $this->dispatch('eventDeleted');
+    }
 
 
 

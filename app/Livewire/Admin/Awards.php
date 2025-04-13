@@ -48,20 +48,20 @@ class Awards extends Component
         }
     }
 
-    #[On('deleteAward')]
-    public function deleteAward($id)
-    {
-        dd('id', $id);
-        $award = Award::findOrFail($id);
+    // #[On('deleteAward')]
+    // public function deleteAward($id)
+    // {
+    //     dd('id', $id);
+    //     $award = Award::findOrFail($id);
     
-        if ($award->awardImg && \Storage::exists($award->awardImg)) {
-            \Storage::delete($award->awardImg);
-        }
+    //     if ($award->awardImg && \Storage::exists($award->awardImg)) {
+    //         \Storage::delete($award->awardImg);
+    //     }
     
-        $award->delete();
+    //     $award->delete();
     
-        session()->flash('message', 'Award deleted successfully!');
-    }
+    //     session()->flash('message', 'Award deleted successfully!');
+    // }
     
 
 

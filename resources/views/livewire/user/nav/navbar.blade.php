@@ -12,7 +12,7 @@
             <a href="{{route('about')}}" class="nav-item nav-link">About</a>
             <a href="{{route('service')}}" class="nav-item nav-link">Services</a>
             <a href="{{route('events')}}" class="nav-item nav-link">Event</a>
-            <a href="#" class="nav-item nav-link">Career</a>
+            <a href="{{route('carrer')}}" class="nav-item nav-link">Career</a>
             <a href="{{route('contact')}}" class="nav-item nav-link">Contact</a>
         </div>
         {{-- <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton> --}}
