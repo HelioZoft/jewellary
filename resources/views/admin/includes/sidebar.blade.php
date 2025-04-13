@@ -66,7 +66,7 @@
         </li>
         
         <li class="nav-item">
-          <a data-bs-toggle="collapse" href="">
+          <a href="{{route('staff')}}">
             <i class="fas fa-layer-group"></i>
             <p>Staff Management</p>
           </a>

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('phone')->nullable();
             $table->string('staffImg')->nullable(); // Image path (optional)
+            $table->boolean('delete_status')->default(1);
             $table->timestamps();
         });
     }

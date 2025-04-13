@@ -1,7 +1,7 @@
 <div class="container">
     <div class="page-inner">
         <div class="page-header">
-            <h3 class="fw-bold mb-3">Awards Management</h3>
+            <h3 class="fw-bold mb-3">Staff Management</h3>
         </div>
 
         @if (session()->has('message'))
@@ -16,61 +16,70 @@
                 <form wire:submit.prevent="submit" enctype="multipart/form-data">
                     <div class="card">
                         <div class="card-header">
-                            <div class="card-title">Awards Form</div>
+                            <div class="card-title">Staff Form</div>
                         </div>
                         <div class="card-body">
                             <div class="row">
 
-                                {{-- Award Name --}}
-                                <div class="col-md-6 col-lg-6">
+                                {{-- Staff Name --}}
+                                <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="EventName">Awards Name</label>
-                                        <input type="text" class="form-control" id="EventName"
-                                            placeholder="Enter Awards Name" wire:model.defer="awardName">
-                                        @error('awardName') <small class="text-danger">{{ $message }}</small> @enderror
+                                        <label for="staffName">Staff Name</label>
+                                        <input type="text" class="form-control" id="staffName"
+                                            placeholder="Enter Staff Name" wire:model.defer="staffName">
+                                        @error('staffName') <small class="text-danger">{{ $message }}</small> @enderror
                                     </div>
                                 </div>
 
-                                {{-- Award Date --}}
-                                <div class="col-md-6 col-lg-6">
+                                {{-- Staff Position --}}
+                                <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="eventDate">Awards Function Conducted Date</label>
-                                        <input type="date" class="form-control" id="eventDate"
-                                            wire:model.defer="awardDate" />
-                                        @error('awardDate') <small class="text-danger">{{ $message }}</small> @enderror
+                                        <label for="staffPosition">Position</label>
+                                        <input type="text" class="form-control" id="staffPosition"
+                                            placeholder="Enter Position" wire:model.defer="staffPosition">
+                                        @error('staffPosition') <small class="text-danger">{{ $message }}</small> @enderror
                                     </div>
                                 </div>
 
-                                {{-- Award Description --}}
-                                <div class="col-md-6 col-lg-6">
+                                {{-- Staff Email --}}
+                                <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="eventDis">Awards Description</label>
-                                        <textarea class="form-control" id="eventDis" rows="2"
-                                            placeholder="Enter Awards Description"
-                                            wire:model.defer="awardDiscription"></textarea>
-                                        @error('awardDiscription') <small class="text-danger">{{ $message }}</small> @enderror
+                                        <label for="staffEmail">Email</label>
+                                        <input type="email" class="form-control" id="staffEmail"
+                                            placeholder="Enter Email" wire:model.defer="staffEmail">
+                                        @error('staffEmail') <small class="text-danger">{{ $message }}</small> @enderror
                                     </div>
                                 </div>
 
-                                {{-- Award Image --}}
-                                <div class="col-md-6 col-lg-6">
+                                {{-- Staff Phone --}}
+                                <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="imageUpload">Upload Award Image</label>
-                                        <input type="file" class="form-control" id="imageUpload" accept="image/*"
-                                            wire:model="awardImg" />
+                                        <label for="staffPhone">Phone</label>
+                                        <input type="text" class="form-control" id="staffPhone"
+                                            placeholder="Enter Phone Number" wire:model.defer="staffPhone">
+                                        @error('staffPhone') <small class="text-danger">{{ $message }}</small> @enderror
+                                    </div>
+                                </div>
+
+                                {{-- Staff Image --}}
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="staffImg">Upload Staff Image</label>
+                                        <input type="file" class="form-control" id="staffImg" accept="image/*"
+                                            wire:model="staffImg" />
                                         <small class="form-text text-muted">Please upload a clear image (jpg, png,
                                             etc.).</small>
-                                        @error('awardImg') <small class="text-danger">{{ $message }}</small> @enderror
+                                        @error('staffImg') <small class="text-danger">{{ $message }}</small> @enderror
 
-                                        @if ($awardImg)
+                                        @if ($staffImg)
                                             <div class="mt-2">
                                                 <strong>Preview:</strong><br>
-                                                <img src="{{ $awardImg->temporaryUrl() }}" width="150" class="img-thumbnail">
+                                                <img src="{{ $staffImg->temporaryUrl() }}" width="150" class="img-thumbnail">
                                             </div>
-                                        @elseif ($awardImgPath)
+                                        @elseif ($staffImgPath)
                                             <div class="mt-2">
                                                 <strong>Current Image:</strong><br>
-                                                <img src="{{ asset('storage/' . $awardImgPath) }}" width="150" class="img-thumbnail">
+                                                <img src="{{ asset('storage/' . $staffImgPath) }}" width="150" class="img-thumbnail">
                                             </div>
                                         @endif
                                     </div>

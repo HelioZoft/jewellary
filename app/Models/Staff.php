@@ -16,5 +16,6 @@ class Staff extends Model
         'email',
         'phone',
         'staffImg',
+        'delete_status'
     ];
 }

@@ -13,6 +13,8 @@ use App\Livewire\Admin\Awards;
 use App\Livewire\Admin\AwardsList;
 use App\Livewire\Admin\Events;
 use App\Livewire\Admin\EventsList;
+use App\Livewire\Admin\Staff;
+use App\Livewire\Admin\StaffList;
 
 // User Route
 Route::get('/', Home::class)->name('userhome');
@@ -32,4 +34,7 @@ Route::middleware(['auth:admins'])->group(function () {
     Route::get('/events', EventsList::class)->name('all-events');
     Route::get('/add-events', Events::class)->name('add-events');
     Route::get('/edit-events/{id}', Events::class)->name('edit-events');
+    Route::get('/staff', StaffList::class)->name('staff');
+    Route::get('/add-staff', Staff::class)->name('add-staff');
+    Route::get('/edit-staff/{id}',  Staff::class)->name('edit-staff');
 });
