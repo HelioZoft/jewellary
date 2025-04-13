@@ -1,5 +1,8 @@
 </div>
+{{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script> --}}
 <!--   Core JS Files   -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 <script src="{{asset('admin/assets/js/core/jquery-3.7.1.min.js')}}"></script>
 <script src="{{asset('admin/assets/js/core/popper.min.js')}}"></script>
 <script src="{{asset('admin/assets/js/core/bootstrap.min.js')}}"></script>
@@ -35,6 +38,7 @@
 <!-- Kaiadmin DEMO methods, don't include it in your project! -->
 <script src="{{asset('admin/assets/js/setting-demo.js')}}"></script>
 <script src="{{asset('admin/assets/js/demo.js')}}"></script>
+@stack('scripts')
 <script>
   $("#lineChart").sparkline([102, 109, 120, 99, 110, 105, 115], {
     type: "line",

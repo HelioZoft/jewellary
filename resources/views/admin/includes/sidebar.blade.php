@@ -50,6 +50,27 @@
             </ul>
           </div>
         </li>
+
+        <li class="nav-item">
+          <a href="{{ route('all-events') }}">
+            <i class="fas fa-layer-group"></i>
+            <p>Event Management</p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="{{ route('all-awards') }}">
+            <i class="fas fa-layer-group"></i>
+            <p>Award Management</p>
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a data-bs-toggle="collapse" href="">
+            <i class="fas fa-layer-group"></i>
+            <p>Staff Management</p>
+          </a>
+        </li>
       </ul>
     </div>
   </div>
