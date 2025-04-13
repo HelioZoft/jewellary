@@ -48,9 +48,12 @@
                         <a href="{{route('edit-events',['id' => $events->id])}}" title="Edit" style="margin-right: 10px;">
                             <i class="fa-solid fa-pen-to-square" style="font-size: 20px; color: #007bff; cursor: pointer;"></i>
                         </a>
-                        <a title="Delete">
-                            <i class="fa-solid fa-trash" style="font-size: 20px; color: #dc3545; cursor: pointer;"></i>
-                        </a>
+
+
+                      <a href="javascript:void(0);" onclick="confirmDelete('{{ $events->id }}')">
+                          <i class="fa-solid fa-trash text-danger" style="font-size: 20px; color: #dc3545; cursor: pointer;"></i>
+                      </a>
+
                     </td>
                  @endforeach
                 </tbody>
@@ -61,3 +64,39 @@
       </div>
     </div>
   </div>
+  @push('scripts')
+  <script>
+    function confirmDelete(id) {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "This action cannot be undone!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Send Livewire event to backend
+                Livewire.dispatch('confirmDelete', { id: id });
+            }
+        });
+    }
+
+    // Optional: Show success message when backend confirms deletion
+    document.addEventListener('livewire:init', () => {
+        Livewire.on('eventDeleted', () => {
+            Swal.fire({
+                icon: 'success',
+                title: 'Deleted!',
+                text: 'The event has been deleted.',
+                timer: 2000,
+                showConfirmButton: false
+            });
+        });
+    });
+</script>
+
+
+
+@endpush

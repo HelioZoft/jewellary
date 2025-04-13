@@ -7,6 +7,7 @@ use Livewire\Attributes\Layout;
 use Livewire\WithFileUploads;
 use App\Models\Event;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Log;
 
 class Events extends Component
 {
@@ -18,6 +19,9 @@ class Events extends Component
     public $eventDiscription;
     public $eventImg;
     public $eventImgPath;
+
+   
+
 
     protected $rules = [
         'eventName' => 'required|string',
@@ -47,6 +51,8 @@ class Events extends Component
             $this->eventImgPath = $event->eventImg;
         }
     }
+
+
 
     public function submit()
     {
@@ -88,6 +94,15 @@ class Events extends Component
         // Reset form fields
         $this->reset(['eventName','eventDiscription','eventDate','eventImgPath']);
     }
+
+    // public function deleteEvent($id)
+    // {
+    //     Event::findOrFail($id)->delete();
+    //     $this->eventId = Event::all(); // Refresh list
+    //     session()->flash('message', 'Post deleted successfully!');
+    // }
+
+
 
     #[Layout('admin.layouts.app')]
     public function render()
