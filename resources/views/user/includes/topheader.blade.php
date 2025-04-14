@@ -18,3 +18,54 @@
         </div>
     </div>
 </div>
+<style>
+.marquee-container {
+    background-color: white;
+    color: #0d6efd; /* Bootstrap primary blue */
+    height: 45px;
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee-track {
+    display: flex;
+    width: fit-content;
+    animation: marquee 25s linear infinite;
+}
+
+.marquee-content {
+    display: flex;
+    white-space: nowrap;
+    gap: 3rem;
+    line-height: 45px;
+    font-weight: 500;
+}
+
+@keyframes marquee {
+    0%   { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+}
+</style>
+
+<div class="container-fluid px-5 d-none d-lg-block marquee-container">
+    <div class="row gx-0">
+        <div class="col-12">
+            <div class="marquee-track">
+                <div class="marquee-content">
+                    🏢 <strong>Impetus Office</strong> - Shanmuga Nagar, Pudukkottai 622001 |
+                    🏢 <strong>Infinity Office</strong> - Ashok Nagar, Pudukkottai 622001 |
+                    🏢 <strong>Insight Office</strong> - Saravana Theatre, Pudukkottai 622003 |
+                    🏢 <strong>Inspire Office</strong> - Melur, Madurai 625106 |
+                    🏢 <strong>Infogain Office</strong> - Sriram Nagar, Karaikudi 630001 |
+                </div>
+                <div class="marquee-content">
+                    🏢 <strong>Impetus Office</strong> - Shanmuga Nagar, Pudukkottai 622001 |
+                    🏢 <strong>Infinity Office</strong> - Ashok Nagar, Pudukkottai 622001 |
+                    🏢 <strong>Insight Office</strong> - Saravana Theatre, Pudukkottai 622003 |
+                    🏢 <strong>Inspire Office</strong> - Melur, Madurai 625106 |
+                    🏢 <strong>Infogain Office</strong> - Sriram Nagar, Karaikudi 630001 |
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

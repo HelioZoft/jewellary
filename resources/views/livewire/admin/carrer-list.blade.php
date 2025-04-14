@@ -46,7 +46,11 @@
                     <td>{{ $carrer->email }}</td>
                     <td>{{ $carrer->age }}</td>
                     <td>{{ $carrer->role }}</td>
-                    <td><a href="{{Storage::url($carrer->resume) }}" download>Resume</a></td>
+                    <td>
+                      <!-- <a href="{{Storage::url($carrer->resume) }}" download>Resume</a> -->
+                    <a href="{{ route('resume.download', ['id' => $carrer->id]) }}">Download Resume</a>
+
+                    </td>
                     <td>{{ $carrer->accepted ? 'Accepted' : 'Not Accepted' }}</td>
                
                  @endforeach

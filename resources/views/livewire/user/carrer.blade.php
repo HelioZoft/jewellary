@@ -124,8 +124,10 @@
                                     <textarea class="form-control bg-light border-0" rows="3" placeholder="Message"></textarea>
                                 </div> -->
                                 <div class="col-12">
-                                    <button class="btn btn-dark w-100 py-3" type="submit">Request A Quote</button>
+                                    <button class="btn btn-dark w-100 py-3" type="submit">Submit</button>
                                 </div>
+
+
                             </div>
                         </form>
                     </div>
@@ -138,9 +140,10 @@
 @push('scripts')
 <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
 
+
+
 <script>
     document.addEventListener('livewire:load', function () {
-        alert(1);
         Livewire.on('downloadAgreement', () => {
             Swal.fire({
                 title: 'Success!',
@@ -149,7 +152,8 @@
                 confirmButtonText: 'Download Agreement'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    window.location.href = "{{ route('download.agreement') }}";
+                    // Redirect to the download route
+                    window.location.href = "{{ route('download.agreement') }}";  // This will trigger the file download
                 }
             });
         });

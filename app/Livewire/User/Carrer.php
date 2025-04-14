@@ -59,10 +59,10 @@ class Carrer extends Component
         //session()->flash('success', 'Application submitted successfully!');
         $this->reset();
 
-        //return redirect()->route('download.agreement');
+        return redirect()->route('download.agreement');
         // Redirect with flash message
     //return redirect()->route('career.submitted')->with('success', 'Application submitted successfully!');
-    $this->dispatch('applicationSubmitted');
+    //$this->emit('downloadAgreement');
     }
 
 

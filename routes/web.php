@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Response;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DocumentController;
 use App\Livewire\User\Home;
 use App\Livewire\User\About;
 use App\Livewire\User\Service;
@@ -28,7 +29,8 @@ Route::get('/contact', Contact::class)->name('contact');
 Route::get('/carrer', Carrer::class)->name('carrer'); 
 
 Route::get('/download-agreement', function () {
-    $filePath = public_path('agreement.pdf');
+    // Path to the file
+    $filePath = public_path('agreement.pdf');  // Adjust the path if the file is in storage
     return Response::download($filePath, 'agreement.pdf');
 })->name('download.agreement');
 
@@ -47,4 +49,6 @@ Route::middleware(['auth:admins'])->group(function () {
     Route::get('/add-staff', Staff::class)->name('add-staff');
     Route::get('/edit-staff/{id}',  Staff::class)->name('edit-staff');
     Route::get('/carrers', CarrerList::class)->name('all-carrers');
+    Route::get('/resume/download/{id}', [DocumentController::class, 'downloadResume'])->name('resume.download');
+
 });

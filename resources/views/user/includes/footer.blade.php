@@ -106,6 +106,8 @@
     <!-- Template Javascript -->
     <script src="{{asset('user/js/main.js')}}"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    @livewireScripts
+
 </body>
 
 </html>
