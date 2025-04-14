@@ -43,7 +43,7 @@
           <div class="collapse" id="base">
             <ul class="nav nav-collapse">
               <li>
-                <a href="#">
+                <a href="{{ route('all-carrers') }}">
                   <span class="sub-item">Job Enquiry</span>
                 </a>
               </li>

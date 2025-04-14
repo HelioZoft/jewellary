@@ -12,6 +12,7 @@ use App\Livewire\Admin\Login;
 use App\Livewire\Admin\Dashboard;
 use App\Livewire\Admin\Awards;
 use App\Livewire\Admin\AwardsList;
+use App\Livewire\Admin\CarrerList;
 use App\Livewire\Admin\Events;
 use App\Livewire\Admin\EventsList;
 use App\Livewire\Admin\Staff;
@@ -45,4 +46,5 @@ Route::middleware(['auth:admins'])->group(function () {
     Route::get('/staff', StaffList::class)->name('staff');
     Route::get('/add-staff', Staff::class)->name('add-staff');
     Route::get('/edit-staff/{id}',  Staff::class)->name('edit-staff');
+    Route::get('/carrers', CarrerList::class)->name('all-carrers');
 });

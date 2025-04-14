@@ -23,17 +23,14 @@
         </div>
     </div>
     <!-- Full Screen Search End -->
-    @if (session()->has('success'))
-    <div class="alert alert-success mt-3">
-        {{ session('success') }}
-    </div>
-@endif
+ 
+
 
     <!-- Carrer Start -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
-            <div class="col-lg-7">
+            <div class="col-lg-6">
                 <div class="section-title position-relative pb-3 mb-5">
                     <h5 class="fw-bold text-primary text-uppercase">Join Our Team</h5>
                     <h1 class="mb-0">Looking for a New Opportunity? We're Hiring!</h1>
@@ -64,7 +61,7 @@
                 </div>
             </div>
 
-                <div class="col-lg-5">
+                <div class="col-lg-6">
                     <div class="bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
                         <form wire:submit.prevent="submit">
                             <div class="row g-3">
@@ -73,7 +70,7 @@
                                     
                                   </div>
                                   
-                                <!-- </div> -->
+                               
                                 @error('carrerName') <span class="text-danger">{{ $message }}</span> @enderror
                                 <div class="col-12">
                                     <input type="text" class="form-control bg-light border-0" placeholder="Your Phone" id="carrerPhone"  style="height: 55px;" wire:model.defer="carrerPhone">
@@ -138,3 +135,26 @@
     </div>
     <!-- Carrer End -->
 </section>
+@push('scripts')
+<!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
+
+<script>
+    document.addEventListener('livewire:load', function () {
+        alert(1);
+        Livewire.on('downloadAgreement', () => {
+            Swal.fire({
+                title: 'Success!',
+                text: 'Your application has been submitted.',
+                icon: 'success',
+                confirmButtonText: 'Download Agreement'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = "{{ route('download.agreement') }}";
+                }
+            });
+        });
+    });
+</script>
+
+
+@endpush

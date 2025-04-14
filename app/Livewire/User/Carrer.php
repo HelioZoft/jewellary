@@ -26,7 +26,7 @@ class Carrer extends Component
         'carrerEmail' => 'required|email',
         'carrerAge' => 'required|integer',
         'carrerRole' => 'required|string',
-        'carrerResume' => 'required|file|mimes:jpg,pdf,doc,docx|max:2048',
+        'carrerResume' => 'required|file|mimes:pdf,doc,docx|max:2048',
         'accepted' => 'accepted',
     ];
 
@@ -56,10 +56,13 @@ class Carrer extends Component
             'accepted' => $this->accepted,
         ]);
 
-        session()->flash('success', 'Application submitted successfully!');
+        //session()->flash('success', 'Application submitted successfully!');
         $this->reset();
 
-        return redirect()->route('download.agreement');
+        //return redirect()->route('download.agreement');
+        // Redirect with flash message
+    //return redirect()->route('career.submitted')->with('success', 'Application submitted successfully!');
+    $this->dispatch('applicationSubmitted');
     }
 
 
