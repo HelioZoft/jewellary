@@ -7,7 +7,22 @@
                     <h5 class="text-white text-uppercase mb-3 animated slideInDown">Start Your Journey Today!</h5>
                     <h3 class="display-1 text-white mb-md-4 animated zoomIn">Connecting Talent with the Right Jobs </h3>
                     {{-- <a href="quote.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Free Quote</a> --}}
-                    <a href="" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Apply now</a>
+                    {{-- <a href="" class="animated slideInRight" style="display: inline-block; background: transparent; color: #fff; border: 2px solid #fff; padding: 1rem 3rem; font-size: 1.5rem; border-radius: 0.5rem; text-decoration: none;">Apply now</a> --}}
+                    <a  href="{{route('carrer')}}"
+                        class="animated slideInRight"
+                        style="display: inline-block;
+                                background: #007BFF;        /* Blue background */
+                                color: #fff;
+                                border: 2px solid #007BFF;  /* Blue border */
+                                padding: 1rem 3rem;
+                                font-size: 1.5rem;
+                                border-radius: 0.5rem;
+                                text-decoration: none;
+                                transition: all 0.3s ease;"
+                        onmouseover="this.style.background='#fff'; this.style.color='#007BFF';"
+                        onmouseout="this.style.background='#007BFF'; this.style.color='#fff';">
+                        Apply now
+                        </a>
                 </div>
             </div>
         </div>
@@ -18,7 +33,22 @@
                     <h5 class="text-white text-uppercase mb-3 animated slideInDown">Unlock Your Future</h5>
                     <h1 class="display-1 text-white mb-md-4 animated zoomIn">Explore Exciting Career Opportunities!</h1>
                     {{-- <a href="quote.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Free Quote</a> --}}
-                    <a href="" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Apply now</a>
+                    {{-- <a href="" class="animated slideInRight" style="display: inline-block; background: transparent; color: #fff; border: 2px solid #fff; padding: 1rem 3rem; font-size: 1.5rem; border-radius: 0.5rem; text-decoration: none;">Apply now</a> --}}
+                    <a  href="{{route('carrer')}}"
+                    class="animated slideInRight"
+                    style="display: inline-block;
+                            background: #007BFF;        /* Blue background */
+                            color: #fff;
+                            border: 2px solid #007BFF;  /* Blue border */
+                            padding: 1rem 3rem;
+                            font-size: 1.5rem;
+                            border-radius: 0.5rem;
+                            text-decoration: none;
+                            transition: all 0.3s ease;"
+                    onmouseover="this.style.background='#fff'; this.style.color='#007BFF';"
+                    onmouseout="this.style.background='#007BFF'; this.style.color='#fff';">
+                    Apply now
+                    </a>
                 </div>
             </div>
         </div>

@@ -21,6 +21,7 @@
             <a href="{{ route('intern') }}" class="nav-item nav-link {{ request()->routeIs('intern') ? 'active' : '' }}">Internship</a>
             <a href="{{ route('events') }}" class="nav-item nav-link {{ request()->routeIs('events') ? 'active' : '' }}">Event</a>
             <a href="{{ route('carrer') }}" class="nav-item nav-link {{ request()->routeIs('carrer') ? 'active' : '' }}">Career</a>
+            <a href="{{ route('branch') }}" class="nav-item nav-link {{ request()->routeIs('branch') ? 'active' : '' }}">Branches</a>
             <a href="{{ route('contact') }}" class="nav-item nav-link {{ request()->routeIs('contact') ? 'active' : '' }}">Contact</a>
         </div>
 

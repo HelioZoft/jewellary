@@ -29,7 +29,7 @@
             <div class="row g-5">
                 <div class="col-lg-5" style="min-height: 500px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="{{asset('user/img/about.jpg')}}" style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="{{asset('user/img/new/img4.jpg')}}" style="object-fit: cover;">
                     </div>
                 </div>
                 <div class="col-lg-7">
@@ -77,7 +77,13 @@
                     <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
                         <div class="blog-item bg-light rounded overflow-hidden">
                             <div class="blog-img position-relative overflow-hidden">
-                                <img class="img-fluid" src="{{Storage::url($event->eventImg) }}" alt="">
+                                <img
+                                    class="img-fluid"
+                                    src="{{ Storage::url($event->eventImg) }}"
+                                    alt="Event Image"
+                                    style="height: 280px; width: 400px; object-fit: cover; border-radius: 8px;">
+
+                                {{-- <img class="img-fluid" src="{{Storage::url($event->eventImg) }}" alt=""> --}}
                                 {{-- <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Our Branch Opening</a> --}}
                             </div>
                             <div class="p-4">

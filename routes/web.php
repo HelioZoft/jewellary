@@ -19,6 +19,7 @@ use App\Livewire\Admin\EventsList;
 use App\Livewire\Admin\Staff;
 use App\Livewire\Admin\StaffList;
 use App\Livewire\User\Carrer;
+use App\Livewire\User\Branch;
 
 // User Route
 Route::get('/', Home::class)->name('userhome');
@@ -27,6 +28,7 @@ Route::get('/internship', Service::class)->name('intern');
 Route::get('/main-events', Event::class)->name('events');
 Route::get('/contact', Contact::class)->name('contact');
 Route::get('/carrer', Carrer::class)->name('carrer'); 
+Route::get('/branch', Branch::class)->name('branch');
 
 Route::get('/download-agreement', function () {
     // Path to the file
@@ -50,5 +52,4 @@ Route::middleware(['auth:admins'])->group(function () {
     Route::get('/edit-staff/{id}',  Staff::class)->name('edit-staff');
     Route::get('/carrers', CarrerList::class)->name('all-carrers');
     Route::get('/resume/download/{id}', [DocumentController::class, 'downloadResume'])->name('resume.download');
-
 });
