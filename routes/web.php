@@ -36,6 +36,20 @@ Route::get('/download-agreement', function () {
     return Response::download($filePath, 'agreement.pdf');
 })->name('download.agreement');
 
+Route::get('/migrate', function () {
+    try {
+        Artisan::call('migrate', ['--force' => true]);
+        return 'Migration completed successfully!';
+    } catch (\Exception $e) {
+        return 'Migration failed: ' . $e->getMessage();
+    }
+});
+
+Route::get('/optimize', function () {
+    Artisan::call('optimize');
+    return 'App optimized successfully!';
+});
+
 Route::get('/login',[AuthController::class,'adminLoginForm'])->name('login');
 Route::post('/login', [AuthController::class, 'login'])->name('admin.login.submit');
 
